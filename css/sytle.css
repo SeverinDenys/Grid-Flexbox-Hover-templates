@@ -74,3 +74,43 @@ body {
 }
 
 /* FLEXBOX TEMPLATES */
+
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap; /* if there is not enough space, the items will wrap to the new line */
+  justify-content: center; /* changes the MAIN AXIS. There are also flex-start(default), flex-end, space-between, space around */
+  align-items: center; /* changes the CROSS AXIS. stretch(default), flex-start, center(align items vertically), space around */
+  /* align-content: center;  only for multiline flexbox container. It's not often used */
+  /* flex-direction: column;  our items will show in column instead of single row */
+}
+
+.title-flexbox {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.flexbox-item {
+  width: 20rem;
+  font-size: 2rem;
+  margin: 1rem;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  /* flex: 0 0 70%; flex-grow, flex-shrink, flex-basis */
+  min-height: 10rem;
+  flex-shrink: 0; /* won't allow out item to shrink, regardles of the having size */
+  order: 3; /* changes the order of item without changing html  */
+}
+
+.flexbox-item-2 {
+  min-height: 20rem;
+  /* align-self: center; allows to change specific item */
+}
+
+.flexbox-item-3 {
+  min-height: 30rem;
+  /* flex-grow: 1; will stretch to all empty space it has. We can use it to multiple items */
+}

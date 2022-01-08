@@ -13,13 +13,13 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.big-container {
-}
-
 .title {
   text-align: center;
   margin-top: 2.5rem;
-  font-size: 8rem;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .container {
@@ -41,7 +41,7 @@ body {
 }
 
 .header {
-  background-color: orange;
+  background-color: var(--color-primary);
   grid-column: 1 / -1;
 }
 
@@ -82,11 +82,6 @@ body {
   align-items: center; /* changes the CROSS AXIS. stretch(default), flex-start, center(align items vertically), space around */
   /* align-content: center;  only for multiline flexbox container. It's not often used */
   /* flex-direction: column;  our items will show in column instead of single row */
-}
-
-.title-flexbox {
-  font-size: 4rem;
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -113,4 +108,98 @@ body {
 .flexbox-item-3 {
   min-height: 30rem;
   /* flex-grow: 1; will stretch to all empty space it has. We can use it to multiple items */
+}
+
+/* BUTTON HOVER */
+
+.container-btn {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto 3rem;
+}
+
+button {
+  margin: 1rem;
+}
+
+.btn {
+  background-color: rgb(199, 198, 198);
+  color: #222;
+  padding: 0.5rem 1rem;
+  margin: 1.6rem auto;
+  font-size: 3rem;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-border-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border: 5px solid rgb(187, 181, 181);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn-border-top:hover::before,
+.btn-border-top:focus::before {
+  top: calc(2px * -2);
+  left: calc(2px * -2);
+  right: calc(2px * -2);
+  bottom: calc(2px * -2);
+}
+
+.btn-border-slider::before {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-color: rgb(238, 214, 76);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn-border-slider:hover::before,
+.btn-border-slider:focus::before {
+  transform: scaleX(1);
+}
+
+.btn-border-slider {
+  z-index: 1;
+  transition: color 300ms ease-in-out;
+}
+
+.btn-border-slider:hover {
+  color: rgb(0, 101, 126);
+}
+
+.btn-border-underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: rgb(0, 174, 255);
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.btn-border-underline:hover::before,
+.btn-border-underline:focus::before {
+  transform: scaleX(1);
 }

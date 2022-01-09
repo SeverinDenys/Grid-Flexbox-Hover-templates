@@ -1,2 +1,2 @@
-# Grid-Flexbox-Hover-templates
+# Templates
 Small template list with comments to better understanding grid/flexbox/hover etc. And sort of small ideas for future projects.

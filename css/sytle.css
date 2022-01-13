@@ -9,7 +9,7 @@ body {
   background: linear-gradient(
     to right,
     #005aa7,
-    #fffde4
+    #3e626b
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -17,9 +17,10 @@ body {
   text-align: center;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
+  color: white;
   font-size: 4rem;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
 
 .container {
@@ -41,7 +42,7 @@ body {
 }
 
 .header {
-  background-color: var(--color-primary);
+  background-color: orangered;
   grid-column: 1 / -1;
 }
 
@@ -79,7 +80,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* if there is not enough space, the items will wrap to the new line */
   justify-content: center; /* changes the MAIN AXIS. There are also flex-start(default), flex-end, space-between, space around */
-  align-items: center; /* changes the CROSS AXIS. stretch(default), flex-start, center(align items vertically), space around */
+  align-items: stretch; /* changes the CROSS AXIS. stretch(default), flex-start, center(align items vertically), space around */
   /* align-content: center;  only for multiline flexbox container. It's not often used */
   /* flex-direction: column;  our items will show in column instead of single row */
   margin-bottom: 3rem;
@@ -115,10 +116,10 @@ body {
 .container-btn {
   width: 1000px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 0 auto 3rem;
 }
 
@@ -137,6 +138,7 @@ button {
   position: relative;
   cursor: pointer;
   border-radius: 5px;
+  text-align: center;
 }
 
 .btn-border-top::before {
@@ -202,4 +204,100 @@ button {
 .btn-border-underline:hover::before,
 .btn-border-underline:focus::before {
   transform: scaleX(1);
+}
+
+/* NAV-BAR TEMPLATE */
+/* 1 */
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #333;
+  margin: 2rem 1rem;
+}
+
+.wrapper-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #333;
+}
+
+.wrapper-3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #333;
+}
+
+.logo {
+  width: 15%;
+  cursor: pointer;
+}
+
+.logo-2 {
+  width: 15%;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.logo-3 {
+  width: 15%;
+  cursor: pointer;
+  order: 3;
+  margin-left: auto;
+}
+
+.nav-2 {
+  order: 1;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.nav__links a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links a:hover {
+  color: #f9e73c;
+}
+
+.cta-3 {
+  order: 2;
+}
+
+button {
+  padding: 0.9rem 2.5rem;
+  background-color: #f9813c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5rem;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-3 {
+  margin-left: 2rem;
+}
+
+button:hover {
+  background-color: #bb4602;
+  color: #ffe714;
 }

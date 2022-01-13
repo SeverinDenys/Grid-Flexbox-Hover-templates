@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/sytle.css" />
     <title>Grid, flexbox, hover templates</title>
   </head>
   <body>
     <h2 class="title">Grid templates</h2>
-    <div class="container">
+    <div class="container grid-ish">
       <div class="item header">header</div>
       <div class="item item--2">small box 1</div>
       <div class="item item--3">small box 2</div>
@@ -20,7 +24,7 @@
     </div>
 
     <!-- FLEX-BOX -->
-    <h2 class="title">Flexbox templates</h2>
+    <h2 class="title">Flexbox templates 1</h2>
     <div class="flexbox-container">
       <div class="flexbox-item flexbox-item-1">flexbox-item-1</div>
       <div class="flexbox-item flexbox-item-2">flexbox-item-2</div>
@@ -32,8 +36,45 @@
     <div class="container container-btn">
       <div class="btn btn-border-top">Border pop</div>
       <div class="btn btn-border-slider">Background slide</div>
-
       <div class="btn btn-border-underline">border underline</div>
+    </div>
+
+    <!-- NAV BAR TEMPLATE -->
+    <h2 class="title">Nav bar templates</h2>
+    <div class="wrapper">
+      <img src="img/logo.png" alt="logo" class="logo" />
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta"><button>Contact</button></a>
+    </div>
+
+    <div class="wrapper wrapper-2">
+      <img src="img/logo.png" alt="logo" class="logo logo-2" />
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta"><button>Contact</button></a>
+    </div>
+
+    <div class="wrapper wrapper-3">
+      <img src="img/logo.png" alt="logo" class="logo logo-3" />
+      <nav class="nav-2">
+        <ul class="nav__links">
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="cta cta-3"><button class="btn-3">Contact</button></a>
     </div>
   </body>
 </html>
